@@ -1,0 +1,24 @@
+package com.service;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.entity.User;
+import com.repo.UserRepository;
+
+@Service
+public class UserService {
+
+	@Autowired
+	UserRepository accountRepository;
+	
+	public String createUser(User user) {
+		
+			accountRepository.save(user);
+			return "User created";
+		}
+	
+	
+	
+}

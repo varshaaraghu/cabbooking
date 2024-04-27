@@ -1,0 +1,20 @@
+package com.booking.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.booking.entity.Booking;
+import com.booking.repository.BookingRepo;
+
+
+@Service
+public class BookingService {
+
+	@Autowired
+	BookingRepo bookinRepo;
+	public String createUser(Booking bookingInfo) 
+		System.out.println("Inside User controller");
+
+		
+	}
+}

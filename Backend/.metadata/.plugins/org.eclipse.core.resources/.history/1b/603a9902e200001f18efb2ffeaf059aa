@@ -1,0 +1,34 @@
+package com.booking.service;
+
+import java.sql.Timestamp;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.booking.entity.BookingInfo;
+import com.booking.repository.BookingRepo;
+
+
+@Service
+public class BookingService {
+
+	@Autowired
+	BookingRepo bookingRepo;
+	public String bookCab (BookingInfo bookingInfo) {
+		System.out.println("Inside booking service");
+		float distance = bookingInfo.getDistance();
+		int userid = bookingRepo.findByMobile(bookingInfo.getMobile());
+		bookingInfo.setBookingtime(new Timestamp(System.currentTimeMillis()));
+		if(distance <= 100)
+			bookingInfo.setPrice(bookingInfo.getDistance()*10);
+		else if(distance > 100 && distance <= 200 ) 
+			bookingInfo.setPrice(bookingInfo.getDistance()*20);
+		else if(distance > 200 && distance <= 300 ) 
+			bookingInfo.setPrice(bookingInfo.getDistance()*30);
+		else
+			bookingInfo.setPrice(bookingInfo.getDistance()*50);
+		bookingInfo.setUserId(userid);
+		bookingRepo.save(bookingInfo);
+		return "booked";
+	}
+}

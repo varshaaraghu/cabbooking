@@ -1,0 +1,28 @@
+package com.service;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.entity.User;
+import com.repo.UserRepository;
+
+@Service
+public class UserService {
+
+	@Autowired
+	UserRepository accountRepository;
+	
+	public String createUser(User user) {
+		Optional<User> op = accountRepository.findById(account.getAccno());
+		if(op.isPresent()) {
+			return "Account number must be unique";
+		}else {
+			accountRepository.save(account);
+			return "Account created";
+		}
+	}
+	
+	
+}

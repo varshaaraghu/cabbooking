@@ -1,0 +1,65 @@
+package com.booking.entity;
+
+import java.sql.Timestamp;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="booking")
+public class Booking {
+
+	@Id
+	private Integer bookingId;
+	private String from;
+	private String destination;
+	private Timestamp bookingtime;
+	private float distance;
+	private float price;
+	public Integer getBookingId() {
+		return bookingId;
+	}
+	public void setBookingId(Integer bookingId) {
+		this.bookingId = bookingId;
+	}
+	public String getOrigin() {
+		return from;
+	}
+	public void setOrigin(String origin) {
+		this.from = origin;
+	}
+	public String getDestination() {
+		return destination;
+	}
+	public void setDestination(String destination) {
+		this.destination = destination;
+	}
+	public Timestamp getBookingtime() {
+		return bookingtime;
+	}
+	public void setBookingtime(Timestamp bookingtime) {
+		this.bookingtime = bookingtime;
+	}
+	public float getDistance() {
+		return distance;
+	}
+	public void setDistance(float distance) {
+		this.distance = distance;
+	}
+	public float getPrice() {
+		return price;
+	}
+	public void setPrice(float price) {
+		this.price = price;
+	}
+	@Override
+	public String toString() {
+		return "Booking [bookingId=" + bookingId + ", origin=" + from + ", destination=" + destination
+				+ ", bookingtime=" + bookingtime + ", distance=" + distance + ", price=" + price + "]";
+	}
+	
+	
+}

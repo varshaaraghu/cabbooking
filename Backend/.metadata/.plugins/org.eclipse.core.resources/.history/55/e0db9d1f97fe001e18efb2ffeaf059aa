@@ -1,0 +1,15 @@
+package com.booking.service;
+
+import org.springframework.stereotype.Service;
+
+import com.entity.User;
+
+@Service
+public class BookingService {
+
+	public String createUser(User user) {
+		System.out.println("Inside User controller");
+
+		
+	}
+}

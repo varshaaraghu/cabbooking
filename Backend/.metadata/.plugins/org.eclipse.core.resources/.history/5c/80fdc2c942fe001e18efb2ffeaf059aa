@@ -1,0 +1,18 @@
+package com.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
+public class User {
+	@Id
+	private int userid; // PK
+	private String name;
+	@Column(unique = true) // unique key
+	private String emailId;
+	private String password;
+	private int mobile;
+	private String gender;
+	
+}

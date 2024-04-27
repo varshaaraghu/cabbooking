@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename field &apos;origin&apos; in &apos;com.booking.entity.Booking&apos; to &apos;from&apos;&#x0D;&#x0A;- Original project: &apos;cab&apos;&#x0D;&#x0A;- Original element: &apos;com.booking.entity.Booking.origin&apos;&#x0D;&#x0A;- Renamed element: &apos;com.booking.entity.Booking.from&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;origin&apos;" flags="589826" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.booking.entity{Booking.java[Booking^origin" name="from" references="true" setter="false" stamp="1713561430461" textual="false" version="1.0"/>
-</session>

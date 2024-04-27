@@ -1,7 +1,0 @@
-package com.booking.entity;
-
-@Entity
-@Table(name="booking")
-public class Booking {
-
-}
